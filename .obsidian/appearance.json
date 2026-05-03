@@ -2,5 +2,8 @@
   "theme": "obsidian",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
   "textFontFamily": "Roboto Mono",
-  "cssTheme": "Atom"
+  "cssTheme": "Atom",
+  "enabledCssSnippets": [
+    "overrides"
+  ]
 }
