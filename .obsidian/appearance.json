@@ -1,9 +1,11 @@
 {
   "theme": "obsidian",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
-  "textFontFamily": "Roboto Mono",
-  "cssTheme": "Atom",
+  "textFontFamily": "FiraCode Nerd Font",
+  "cssTheme": "",
   "enabledCssSnippets": [
     "overrides"
-  ]
+  ],
+  "baseFontSize": 15,
+  "accentColor": ""
 }
