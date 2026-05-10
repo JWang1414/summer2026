@@ -1,7 +1,7 @@
 {
   "theme": "obsidian",
-  "monospaceFontFamily": "JetBrainsMono Nerd Font",
-  "textFontFamily": "FiraCode Nerd Font",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font,Liberation Mono",
+  "textFontFamily": "FiraCode Nerd Font,Liberation Mono",
   "cssTheme": "",
   "enabledCssSnippets": [
     "overrides"
