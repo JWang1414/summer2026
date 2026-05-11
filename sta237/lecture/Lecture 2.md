@@ -45,15 +45,15 @@ $$
 # The Law of Total Probability
 Suppose $C_{1},\dots,C_{m}$ are disjoint events such that $C_{1}\cup\dots \cup C_{m}=\Omega$. For any arbitrary event $A$, the Law of Total Probability states that:
 $$
-	P(A) = \sum_{i=1}^{m} [P(A|C_{i})P(C_{i})]
+	P(A) = \sum_{i=1}^{m} [P(A|C_{i})P(C_{i})] = \sum_{i=1}^{m} P(A\cap C_{i})
 $$
 Which essentially states that it is possible to find the probability $A$ will occur by partitioning it according to a set of disjoint scenarios.
-# Bayes’ Rule
+## Bayes’ Rule
 A result derived from the law of total probability, and the multiplication rule.
 
 Suppose $C_{1}, \dots, C_{m}$ are disjoint events such that $C_{1}\cup\dots \cup C_{m}=\Omega$. The conditional probability of $C_{i}$ given an arbitrary events $A$ is:
 $$
-	P(C_{i}|A) = \frac{P(A|C_{i})P(C_{i})}{\sum_{i=1}^{m} [P(A|C_{i})P(C_{i})]}
+	P(C_{i}|A) = \frac{P(C_{i}\cap A)}{P(A)} = \frac{P(A|C_{i})P(C_{i})}{\sum_{i=1}^{m} [P(A|C_{i})P(C_{i})]}
 $$
 ## 2 Fair Coins and 1 Unfair Coin
 Suppose you have two fair coins and one unfair coin with probability $p\neq 0.5$ of landing head. You randomly choose two coins and flip them. As a result, you have two heads. What is the probability that you have chosen an unfair coin?
