@@ -79,4 +79,95 @@ Generally speaking, we are interested in the possible values of a random variabl
 
 The collection of these values is the *distribution* of the random variable. For a discrete random variable, the distribution is determined by the *probability mass function* (PMF) or the *cumulative distribution function* (CDF).
 
-- I stopped writing notes here because it were taking too long. Finish this later. I'll write down anything that can't be found in the slides
+Probability Mass Function:
+> The probability mass function of a discrete random variable $X$, denoted with $p$, is the function $p:R\to[0, 1]$, defined by
+$$
+	p(x) = P(X=x)
+$$
+> for $-\infty<x<\infty$
+
+Essentially, the PMF assigns a probability to each possible value.
+
+Cumulative Distribution Function:
+> The cumulative distribution function of a discrete random variable $X$, denoted with $F$, is the function $F:\mathbb{R}\to[0, 1]$, defined by
+$$
+	F(a) = P(X\leq a)
+$$
+> for $-\infty<a<\infty$
+
+This function instead provides the probability that the random variable $X$ takes on a value less than or equal to $a$.
+### Properties of the Cumulative Distribution Function
+For any random variable $X$ and distribution function $F$:
+- $F$ is a non-decreasing function
+- $\lim_{ a \to -\infty }F(a)=0$ and $\lim_{ a \to \infty }F(a)=1$
+- $F$ is right-continuous. For any small positive $\varepsilon$, $\lim_{ \varepsilon \downarrow 0 }F(a+\varepsilon)=F(a)$
+	- To be honest, I'm not sure what this one means
+### Relationship Between PMF and CDF
+For some discrete random variable $X$, the PMF $p$ and CDF $F$ determine the distribution.
+
+Suppose $X$ takes values $a_{1}, a_{2}, \dots$ such that,
+$$
+	p(a_{i})>0 \qquad \sum_{i}p(a_{i})=1
+$$
+Then the CDF is,
+$$
+	F(a) = P(X\leq a) = \sum_{a_{i}=a} p(a_{i})
+$$
+# Bernoulli Distribution
+Used to define a random variable for a single experiment with two distinct outcomes.
+
+Definition:
+> A discrete random variable $X$ has a Bernoulli distribution with parameter $p$, $0\leq p\leq 1$, if its PMF is given by
+$$
+	p_{X}(x) = \begin{cases}
+	p & x=1 \\
+	1-p & x=0
+	\end{cases}
+$$
+> Typically denoted as $\text{Ber}(p)$
+# Binomial Distribution
+Used to describe the number of successes out of a fixed number of trials, summarising the sum of $n$ independent and identical Bernoulli trials.
+
+Definition:
+> A discrete random variable $X$ has a binomial distribution with parameters $n$ and $p$, $n=1,2,3,\dots$ and $0\leq p\leq 1$, if its PMF is given by
+$$
+	p_{X}(x) = \begin{pmatrix}
+	n \\
+	x
+	\end{pmatrix} p^x (1-p)^{n-x} \qquad \forall x=0, 1, 2, \dots, n
+$$
+> Which is denoted as $\text{Bin}(n, p)$
+
+The binomial distribution assigns a total probability 1, and so works as a valid PMF.
+
+Binomial Theorem:
+> Used commonly to simplify high power polynomials.
+$$
+	(x+y)^{n} = \sum_{k=0}^{n} \begin{pmatrix}
+	n \\
+	k
+	\end{pmatrix} x^{k} y^{n-k}
+$$
+
+![[Pasted image 20260511185547.png]]
+A visualisation of the binomial distribution
+# Geometric Distribution
+Models the number of independent, identical Bernoulli trials needed for the first success.
+
+Definition:
+> A discrete random variable $X$ has a geometric distribution with parameter $p$, $0\leq p\leq 1$, if its PMF is given by
+$$
+	p_{X}(x) = (1-p)^{x-1}p \qquad \forall x=1, 2, \dots
+$$
+> Typically denoted by $\text{Geo}(p)$
+
+For some random variable $X$ with $\text{Geo}(p)$ distribution, note that the probability that the first $n$ trials are failures is:
+$$
+	P(X>n) = (1-p)^{n}
+$$
+
+Also, the geometric distribution is memory-less:
+$$
+	P(X>n+k | X>k) = P(X>n)
+$$
+Meaning that subsequent trials do not depend on the previous trials.
