@@ -148,6 +148,7 @@ $$
 	k
 	\end{pmatrix} x^{k} y^{n-k}
 $$
+- There is a combinatoric proof of this in the textbook
 
 ![[Pasted image 20260511185547.png]]
 A visualisation of the binomial distribution
