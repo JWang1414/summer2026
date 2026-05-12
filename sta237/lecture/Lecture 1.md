@@ -81,7 +81,7 @@ Let $S$ be a set of length-$k$ sequences. If there are $n_{1}$ possible first en
 
 For example, the number of permutations for 1234 is $4\times 3\times 2\times 1=4!$.
 
-Definitions:
+Permutation:
 > A *permutation* is a rearrangement of objects into distinct sequences (order matters). There are:
 $$
 	\frac{n!}{n_{1}!n_{2}!\dots n_{r}!}
@@ -89,6 +89,7 @@ $$
 > different permutations for $n=n_{1}+n_{2}+\dots+n_{r}$ objects, where $n_{1}$ are alike, $n_{2}$ are alike and so on.
 
 
+Combination:
 > A *combination* is an unordered collection of objects (order doesn't matter). There are:
 $$
 	\begin{pmatrix}

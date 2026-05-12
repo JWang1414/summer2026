@@ -92,7 +92,7 @@ $A$ can be replaced with $A^{c}$, $B$ with $B^{c}$, or both.
 
 Note that two disjoint events cannot be independent.
 
-Definitions:
+Mutual independence:
 > A collection of events $A_{1}, \dots, A_{m}$ is called *mutually independent* if the multiplication rule holds for every finite subgroup of events in the collection.
 
 > That is, for any distinct indices $i_{1}, \dots, i_{k}\in \{ 1, 2, \dots, m \}$,
@@ -100,10 +100,11 @@ $$
 	P(A_{i_{1}}\cap\dots \cap A_{i_{k}}) = P(A_{i_{1}})\dots P(A_{i_{k}})
 $$
 
+Pairwise independence:
 > A collection of events is called *pairwise independent* if every pair of events is independent.
 $$
 	P(A_{i}\cap A_{j}) = P(A_{i})P(A_{j})
 $$
 > Where $i\neq j$.
 
-Notably, mutual independence implies pairwise independent, but the converse is not always true.
+Notably, mutual independence implies pairwise independence, but the converse is not always true.
