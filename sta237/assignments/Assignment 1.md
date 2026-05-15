@@ -82,9 +82,7 @@ $$
 # Question 4
 ![[Pasted image 20260515154409.png]]
 
-Calculate the probability person A wins.
-
-Define $p$ as the probability of winning. The chance to win on the first round is 1/6. Furthermore, the chance that both players lose is (5/6)(5/6). The full range of possibilities is therefore,
+Define $p$ as the probability of person A winning. The chance to win on the first round is 1/6. Furthermore, the chance that both players lose is (5/6)(5/6). After both players have lost, the game state resets, and subsequent rounds play out with the same probabilities as the first round. The full range of possibilities is therefore:
 $$
 	p = \frac{1}{6} + \frac{5}{6} \frac{5}{6}p = \frac{1}{6} + \frac{25p}{36} \implies p=\frac{6}{11}
 $$
