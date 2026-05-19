@@ -162,3 +162,27 @@ Example: Probability of Major Earthquakes Next Year
 
 Capture-Recapture: Probability Calculations
 - Part b on the slides is incorrect
+
+Example 3: Uniform Distribution Probability
+
+The uniform distribution for this example is simple:
+$$
+	f(x) = \text{Unif}(0, 1400) = \frac{1}{1400}
+$$
+To find the chance that Esma is past Chicago we do:
+$$
+	P(X>400) = \int_{400}^{1400} \frac{1}{1400} \, dx = \frac{1400-400}{1400}
+$$
+The rest is simple.
+
+Example 4: Exponential Distribution Probability
+
+The logic here is somewhat obscured. To calculate $P(T>5)$ for this exponential distribution:
+$$
+	P(T>5) = \int_{5}^{\infty} f(x) \, dx = \int_{5}^{\infty} \lambda e^{ -\lambda x } \, dx
+$$
+This integral becomes,
+$$
+	\lambda \left[ -\frac{1}{\lambda}e^{ -\lambda x } \right] ^{\infty}_{5} = -\left[ e^{ -\lambda x } \right] ^{\infty}_{5} = -(0-e^{ -5\lambda })
+$$
+Which is the result that is shown in the slides.
