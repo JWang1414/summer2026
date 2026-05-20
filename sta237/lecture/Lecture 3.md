@@ -80,7 +80,7 @@ Generally speaking, we are interested in the possible values of a random variabl
 The collection of these values is the *distribution* of the random variable. For a discrete random variable, the distribution is determined by the *probability mass function* (PMF) or the *cumulative distribution function* (CDF).
 
 Probability Mass Function:
-> The probability mass function of a discrete random variable $X$, denoted with $p$, is the function $p:R\to[0, 1]$, defined by
+> The probability mass function of a discrete random variable $X$, denoted with $p$, is the function $p:\mathbb{R}\to[0, 1]$, defined by
 $$
 	p(x) = P(X=x)
 $$
@@ -111,7 +111,7 @@ $$
 $$
 Then the CDF is,
 $$
-	F(a) = P(X\leq a) = \sum_{a_{i}=a} p(a_{i})
+	F(a) = P(X\leq a) = \sum_{a_{i}\leq a} p(a_{i})
 $$
 # Bernoulli Distribution
 Used to define a random variable for a single experiment with two distinct outcomes.
