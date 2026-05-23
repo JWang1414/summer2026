@@ -112,3 +112,6 @@ $$
 	E[g(X)] = \sum_{x \in S} g(x)P(X=x) \qquad E[g(X)] = \int_{-\infty}^{\infty} g(x)f(x) \, dx
 $$
 Where $g(X)$ is the function of the random variable. So we average over the values of $g(X)$ as opposed to $X$.
+# Class Notes
+Study the Derivation Using Total Expectation.
+- Specifically why the expectation after a failure is $1+E[X]$ as opposed to just $E[X]$.
