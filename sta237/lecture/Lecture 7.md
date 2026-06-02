@@ -1,5 +1,64 @@
-Class notes:
+- Most of this lecture was composed of examples for the transformation of variables. Refer to the previous lecture for more detailed coverage of that topic
+# Indicator Function
+> Given a set $A\subseteq \Omega$, the indicator function $1_{A}$ is defined as:
+$$
+	1_{A}(x) = \begin{cases}
+	1 & x \in A \\
+	0 & \text{otherwise}
+	\end{cases}
+$$
 
+Notably, it is defined such that:
+$$
+	E(1_{A}(X)) = \sum_{x \in A}P(X=x) = P(A)
+$$
+$$
+	E(1_{A}(X)) = \int_{A} f_{X}(x) \, dx = P(A)
+$$
+In the discrete and continuous cases, respectively.
+
+# Inverse Transform Method
+> Suppose $X$ is a continuous random variable with CDF $F$, where $F$ is invertible with inverse function $F^{-1}$. Let $U \sim U(0, 1)$. Then the distribution of $F^{-1}(U)$ is equal to the distribution of $X$. Similarly, $F(X) \sim U(0, 1)$.
+
+The inverse transform method is typically used to generate a random variable with a desired continuous distribution from $U(0, 1)$.
+
+---
+Example:
+Generating samples from $\text{Exp}(1)$.
+
+We would like to have $X\sim\text{Exp}(1)$. The CDF of this function is:
+$$
+	F(x) = 1-e^{ -x }
+$$
+By the inverse transform method:
+$$
+	U=F(X) \implies U=1-e^{ -X } \implies X=-\ln(1-U)
+$$
+Therefore, in order to transform some uniform sample from $U(0, 1)$ to the exponential distribution, we would send it through this transform:
+$$
+	-\ln(1-U) \equiv  -\ln U
+$$
+# Jensen’s Inequality
+For some transformed random variable $Y=g(X)$ we would often like to compute:
+$$
+	E[Y] = E[g(X)]
+$$
+For linear functions,
+$$
+	E[g(X)] = g(E[X])
+$$
+However, more generally, for convex functions:
+$$
+	g(E[X]) \leq  E[g(X)]
+$$
+- This is Jensen's inequality
+
+Notably, since $x^{2}$ is a convex function, this tells us,
+$$
+	(E[X])^{2} \leq  E[X^{2}]
+$$
+And so the variance is always positive.
+# Class notes
 Lecture 6 slides
 
 21.
