@@ -43,3 +43,69 @@ Numerical value of the conditional probability obtained using R:
 ( pbeta(qbeta(0.7, 3, 2), 3, 2) - pbeta(0.6, 3, 2) ) / pbeta(qbeta(0.7, 3, 2), 3, 2)
 # Output: [1] 0.3211429
 ```
+
+- Fill in the CDF in part 2 of this question
+# Question 3
+Find $c$.
+$$
+	\begin{align}
+	\sum_{x=0}^{4} c(x+1) & = c(0+1) + c(1+1) + c(2+1) + c(3+1) + c(4+1) \\
+	 & = c+2c+3c+4c+5c \\
+	 & = 15c
+	\end{align}
+$$
+$$
+	15c=1 \implies c=\frac{1}{15}
+$$
+
+$$
+	\text{Var}(Y) = E[Y^{2}] - E^{2}[Y]
+$$
+Begin by computing the conditional expectation value.
+$$
+	E[Y|X] = \sum_{y} yP(Y|X=x) = \sum_{y}y\text{Binomial}(x+2, 0.4)
+$$
+This is equivalent to the expectation of the binomial function, therefore,
+$$
+	E[Y|X] = (x+2)(0.4) = 0.4(x+2)
+$$
+Furthermore,
+$$
+	E[Y^{2}|X] = \sum_{y}y^{2}P(Y|X=x) = \sum_{y}y^{2} \text{Binomial}(x+2, 0.4)
+$$
+- Complete this question, it's the hardest one
+# Question 4
+Given:
+$$
+	Y = g(X) = \sqrt{ X+1 }
+$$
+Invert,
+$$
+	Y=\sqrt{ X+1 } \implies Y^{2}=X+1 \implies X = Y^{2}-1
+$$
+$$
+	X=g^{-1}(Y) = h(Y) = Y^{2}-1
+$$
+Transformed version:
+$$
+	f_{Y}(y) = f_{X}(h(y)) \lvert h'(y) \rvert = \frac{2}{9}(y^{2}-1) \left| \frac{d}{dy}(y^{2}-1) \right|
+$$
+$$
+	\frac{d}{dy}(y^{2}-1) = 2y
+$$
+$$
+	f_{Y}(y) = \frac{2}{9}(y^{2}-1)(2y) = \frac{4}{9}y(y^{2}-1)
+$$
+Compute,
+$$
+	P(1.5<Y<2) = \int_{1.5}^{2} \frac{4}{9}y(y^{2}-1) \, dy = \frac{4}{9} \int_{1.5}^{2} y^{3}-y \, dy
+$$
+$$
+	\int_{1.5}^{2} y^{3} \, dy = \frac{y^{4}}{4} \bigg|^{2}_{y=1.5} = \frac{175}{64}
+$$
+$$
+	\int_{1.5}^{2} y \, dy = \frac{y^{2}}{2} \bigg|^{2}_{y=1.5} = \frac{7}{8}
+$$
+$$
+	P(1.5<Y<2) = \frac{4}{9}\left( \frac{175}{64} - \frac{7}{8} \right) = \frac{119}{144} \approx 0.83
+$$
