@@ -45,35 +45,6 @@ Numerical value of the conditional probability obtained using R:
 ```
 
 - Fill in the CDF in part 2 of this question
-# Question 3
-Find $c$.
-$$
-	\begin{align}
-	\sum_{x=0}^{4} c(x+1) & = c(0+1) + c(1+1) + c(2+1) + c(3+1) + c(4+1) \\
-	 & = c+2c+3c+4c+5c \\
-	 & = 15c
-	\end{align}
-$$
-$$
-	15c=1 \implies c=\frac{1}{15}
-$$
-
-$$
-	\text{Var}(Y) = E[Y^{2}] - E^{2}[Y]
-$$
-Begin by computing the conditional expectation value.
-$$
-	E[Y|X] = \sum_{y} yP(Y|X=x) = \sum_{y}y\text{Binomial}(x+2, 0.4)
-$$
-This is equivalent to the expectation of the binomial function, therefore,
-$$
-	E[Y|X] = (x+2)(0.4) = 0.4(x+2)
-$$
-Furthermore,
-$$
-	E[Y^{2}|X] = \sum_{y}y^{2}P(Y|X=x) = \sum_{y}y^{2} \text{Binomial}(x+2, 0.4)
-$$
-- Complete this question, it's the hardest one
 # Question 4
 Given:
 $$
@@ -108,4 +79,45 @@ $$
 $$
 $$
 	P(1.5<Y<2) = \frac{4}{9}\left( \frac{175}{64} - \frac{7}{8} \right) = \frac{119}{144} \approx 0.83
+$$
+# Question 3
+Find $c$.
+$$
+	\begin{align}
+	\sum_{x=0}^{4} c(x+1) & = c(0+1) + c(1+1) + c(2+1) + c(3+1) + c(4+1) \\
+	 & = c+2c+3c+4c+5c \\
+	 & = 15c
+	\end{align}
+$$
+$$
+	15c=1 \implies c=\frac{1}{15}
+$$
+To compute $\text{Var}(Y)$, use the law of total variance:
+$$
+	\text{Var}(E(Y|X)) + E(\text{Var}(Y|X)) = \text{Var}(Y)
+$$
+Since $Y|X=x\sim\text{Binomial}(x+2, 0.4)$,
+$$
+	E(Y|X) =np= 0.4(x+2)
+$$
+$$
+	\text{Var}(Y|X) =np(1-p)= (x+2)(0.4)(1-0.4) = 0.24(x+2)
+$$
+Substituting into the law of total variance,
+$$
+	\text{Var}(0.4(X+2)) + E(0.24(X+2)) = 0.16 \text{Var}(X) + 0.24(E[X] + 2)
+$$
+Compute $\text{Var}(X)$ and $E[X]$.
+$$
+	E[X] = \sum_{x=0}^{4} xP(X=x) = \frac{1}{15} \sum_{x=0}^{4} x(x+1) = \frac{1}{15} (0+2+6+12+20) = \frac{8}{3}
+$$
+$$
+	E[X^{2}] = \frac{1}{15} \sum_{x=0}^{4} x^{2}(x+1) = \frac{1}{15}(0+2+12+36+80) = \frac{26}{3}
+$$
+$$
+	\text{Var}(X) = E[X^{2}] - E^{2}[X] = \frac{26}{3} - \left( \frac{8}{3} \right)^{2} = \frac{14}{9}
+$$
+Final answer:
+$$
+	\text{Var}(Y) = 0.16 \left( \frac{14}{9} \right) + 0.24\left( \frac{8}{3}+2 \right) = \frac{308}{225} \approx 1.37
 $$
