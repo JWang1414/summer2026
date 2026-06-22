@@ -113,3 +113,40 @@ $$
 $$
 	\text{Var}(Y|X=x) = \frac{x^{2}}{2} - \left( \frac{2x}{3} \right)^{2} = \frac{x^{2}}{18}
 $$
+![[Pasted image 20260622162640.png]]
+Define a new distribution,
+$$
+	Y_{i} = X^{2}_{i}
+$$
+Note that we have,
+$$
+	\frac{1}{100} \sum_{i=1}^{100} Y_{i} = \bar{Y}_{100}
+$$
+Where we are taking the sample mean of $Y_{i}$ over 100 samples. The CLT must be applied to $Y_{i}$ instead of $X_{i}$. Begin by solving for the expectation and variance.
+$$
+	E[Y_{i}] = E[X^{2}_{i}] = \int_{-\infty}^{\infty} x^{2} U(0, 1) \, dx = \int_{0}^{1} x^{2} \, dx = \left[ \frac{x^{3}}{3} \right] ^{1}_{0}
+$$
+$$
+	E[Y_{i}] = \frac{1}{3}
+$$
+Variance:
+$$
+	E[Y^{2}_{i}] = E[X^{4}_{i}] = \int_{-\infty}^{\infty} x^{4}U(0, 1) \, dx = \int_{0}^{1} x^{4} \, dx = \left[ \frac{x^{5}}{5} \right] ^{1}_{0}
+$$
+$$
+	E[Y^{2}_{i}] = \frac{1}{5}
+$$
+$$
+	\text{Var}(Y_{i}) = E[Y^{2}_{i}] - E^{2}[Y_{i}] = \frac{1}{5} - \left( \frac{1}{3} \right)^{2} = \frac{4}{45}
+$$
+According to the CLT, the distribution of $\bar{Y}_{n}$ is approximately,
+$$
+	\bar{Y}_{n} \approx N\left( \frac{1}{3}, \frac{4}{45n} \right)
+$$
+Hence,
+$$
+	\frac{\bar{Y}_{100}-1 /3}{\sqrt{ (4 /45) /100 }} \approx N(0, 1)
+$$
+$$
+	P\left( \bar{Y}_{100} > \frac{2}{5} \right) \approx P\left( Z > \frac{2 /5-1 /3}{\sqrt{ (4 /45) /100 }} \right)= P(Z>\sqrt{ 5 })
+$$
