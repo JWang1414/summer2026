@@ -1,3 +1,4 @@
+
 - Started off with a short segment introducing processes where thermal physics is relevant
 	- Stuff like friction, is really just electromagnetic forces
 	- Why we don't use quantum mechanics to predict the trajectory of classical objects
