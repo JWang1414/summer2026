@@ -125,3 +125,37 @@ Which is the First Law of Thermodynamics (TD1)
 
 Jargon used to describe various kinds of energy transformations:
 ![[Pasted image 20260712230951.png]]
+# Heat capacity & specific heat
+Consider some heat $\Delta Q$ is transferred to an object. The addition of internal energy changes the object's temperature by $\Delta T$. This amount is quantified by:
+$$
+	\Delta Q = C(\Delta T)
+$$
+Where $C$ is the *heat capacity* of the object.
+
+Normalising the heat capacity by the mass yields the *specific heat*:
+$$
+	c=\frac{C}{m} \implies \Delta Q=mc(\Delta T)
+$$
+The heat capacity is a property of a specific object, whereas the specific heat capacity is the property of a material.
+
+An object with a very large heat capacity is called a thermal reservoir. We may transfer finite quantities of heat out of such an object into other systems, without the object’s temperature changing by any appreciable amount. It functions as a *constant-temperature source* or sink for heat.
+
+On the other hand, a good thermometer must have a very small heat capacity. Otherwise, the heat transferred into the thermometer to bring it to equilibrium will itself significantly change the temperature of the object being measured.
+## Heat capacity of particles in a box
+Consider a box whose volume is fixed. $\Delta Q$ heat is transferred by the thermal method, and its internal energy changes by $\Delta \left< E \right> =\Delta Q$. Therefore the change of energy is,
+$$
+	\Delta \left< E \right>  = N (\Delta \left< E_{K} \right> ) = \frac{N(\Delta T)}{\alpha}
+$$
+Where we have used $T=\alpha \left< E_{K} \right>$. So the heat capacity of an ideal gas held at a fixed volume is,
+$$
+	C_{V} = \frac{N}{\alpha} = \frac{3}{2}Nk_{B}
+$$
+- Notice that we assumed the internal energy comes entirely from the translational kinetic energy of the particles. For now, just remember that it applies only to gases whose particles have 3 energetic dof.
+
+Now, imagine a quantity of heat $\Delta Q$ is transferred to gas in a box held at constant external pressure. The increasing heat will increase the pressure inside the box, and thus increase the volume of the box. The work in this process is $\Delta W=-P(\Delta V)$ where $P$ is pressure and $\Delta V$ is the change in volume.
+
+Apply TD1 and you will find,
+$$
+	\frac{\Delta Q}{\Delta T} = \frac{5}{2}Nk_{B} \implies C_{P} = C_{V} + Nk_{B}
+$$
+For the heat capacity at constant pressure for an ideal gas.
