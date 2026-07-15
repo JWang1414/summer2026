@@ -76,3 +76,20 @@ TD1 is:
 $$
 	d\left< E \right>  = dW + dQ
 $$
+Since the ideal gas is isothermal $d\left< E \right> =0$. Therefore,
+$$
+	dQ=-dW = P \, dV
+$$
+Integrate both sides,
+$$
+	Q = \int_{V_{i}}^{V_{f}} \frac{Nk_{B}T}{V} \, dV = Nk_{B}T \int_{V_{i}}^{V_{f}} \frac{1}{V} \, dV = Nk_{B}T \ln\left( \frac{V_{f}}{V_{i}} \right)
+$$
+As needed.
+
+---
+c.
+I expect that if $V_{f}>V_{i}$ then $Q>0$.
+
+$N$, $k_{B}$, and $T$ are all positive. If $V_{f}>V_{i}$ then $V_{f} /V_{i}>1$, therefore $\ln(V_{f} /V_{i})>0$ and $Q>0$.
+
+I conclude that isothermal expansion requires heat input. As needed.
