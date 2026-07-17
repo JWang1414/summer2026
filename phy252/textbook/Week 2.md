@@ -47,3 +47,72 @@ $$
 - Assume we maintain thermal equilibrium at all times
 - Physically, imagine the isothermal system as one where our box is always attached to a conductive thermal reservoir
 - The adiabatic system is one where our box is insulated from all external elements
+## Carnot cycle
+Consider $N$ particles in a box with a movable wall. The Carnot cycle is a cyclical process we use to do work with this gas.
+
+The first step is isothermal expansion. The box is kept in contact with a hot reservoir, and the volume of the gas expands from $V_{1}$ to $rV_{2}$,
+$$
+	W_{A} = Nk_{B}T_{h} \log\left( \frac{1}{r} \right) = -Nk_{B}T_{h} \log r
+$$
+The negative sign tells us work is being done against the external force pushing on it. That is, this is work we can use for some practical purpose
+- Temperature does not change, therefore, internal energy is unchanged
+
+Furthermore, because this is isothermic, the heat transferred from the gas to the reservoir is: $Q_{A}=-W_{A}$
+
+Second is adiabatic expansion, accompanied by a temperature drop. The gas continues to expand, but the box is insulated. The gas cools down, and the total work done in this step is,
+$$
+	W_{B}=C_{V}(T_{c}-T_{h})
+$$
+Once again a negative quantity, because $T_{h}>T_{c}$.
+
+Third, isothermal compression using a cold reservoir. The volume of the case is reduced while the gas is maintained at $T_{c}$. The work done during this step is,
+$$
+	W_{C}=Nk_{B}T_{c}\log r
+$$
+This time, it's positive. Note that, again, the internal energy of the gas is not changing her, and the heat transfer from the cold reservoir is: $Q_{C}=-W_{C}$. The negative sign here telling us energy is flowing from the gas into the reservoir.
+
+Finally, we complete the cycle with adiabatic compression, and an accompanying temperature increase. The volume of the gas is compressed while the box is insulated again. Once its temperature has risen back to the original temperature, $T_{h}$, the amount of work done is:
+$$
+	W_{D}=C_{V}(T_{h}-T_{c})=-W_{B}
+$$
+And just like step B, alongside all adiabatic processes, there is no heat transfer during this step.
+
+The total work from the full cycle is:
+$$
+	W_\text{net} = W_{A} + W_{B} + W_{C} + W_{D} = W_{A} + W_{C} =-Nk_{B}(T_{h}-T_{c})\log r
+$$
+A net negative quantity, telling us that we can use this cycle can be used to perform work.
+
+The total change in the internal energy from the cycle is $\Delta \left< E \right>=0$. The ideal gas is left at the same temperature it started with. So, by TD1, the work output is accompanied by heat transfer from the hot reservoir to the cold reservoir.
+
+A heat engine using the Carnot cycle is called a Carnot engine.
+
+The efficiency of a heat engine is defined to be the ratio of net work output to the heat input,
+$$
+	\eta=-\frac{W_\text{net}}{Q_{h}}
+$$
+The efficiency of the Carnot cycle is,
+$$
+	\eta _\text{Carnot} = \frac{T_{h}-T_{c}}{T_{h}} = 1-\frac{T_{c}}{T_{h}}
+$$
+Unless the cold temperature is absolute zero, the Carnot cycle will never be perfectly efficient.
+
+Generally speaking, for any cyclic heat engine with $\Delta \left< E \right> =0$, TD1 tells us that $-W_\text{net}=Q_{c}+Q_{h}$. So the efficiency can also be expressed as:
+$$
+	\eta=\frac{Q_{c}+Q_{h}}{Q_{h}}
+$$
+## Refrigerator
+If a heat engine is run in reverse, it will instead use external work to extract heat from the cold reservoir, and exhaust heat into the hot reservoir. This is how a fridge works.
+
+The coefficient of performance of a refrigerator is the ratio of heat extracted to the work input required:
+$$
+	\text{COP} = \frac{Q_\text{extracted}}{W_\text{input}}
+$$
+In the Carnot cycle, step $C$ extracts heat from the cold reservoir, and step $A$ deposits heat into the hot reservoir. The work input into the Carnot refrigerator is $W_\text{net}=Nk_{B}(T_{h}-T_{c})\log r$, and the heat extracted is $Q_{c}=Nk_{B}T_{c}\log r$.
+$$
+	\text{COP}_\text{Carnot} = \frac{T_{c}}{T_{h}-T_{c}}
+$$
+Like before, since $\Delta \left< E \right> =0$, TD1 tells us that, in general:
+$$
+	\text{COP}=-\frac{Q_{c}}{Q_{h}+Q_{c}}
+$$
