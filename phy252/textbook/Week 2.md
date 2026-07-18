@@ -116,3 +116,32 @@ Like before, since $\Delta \left< E \right> =0$, TD1 tells us that, in general:
 $$
 	\text{COP}=-\frac{Q_{c}}{Q_{h}+Q_{c}}
 $$
+## Carnot vs. aliens
+Imagine we have an alien cyclic process operating between two thermal reservoirs $T_{h}$ and $T_{c}$. This cycle has a higher efficiency than the Carnot cycle, with $Q_{h}$ extracted from the hot reservoir, and $Q_{c}$ exhausted from the cold reservoir.
+
+Assuming $\eta_{X}>\eta _\text{Carnot}$ is equivalent to:
+$$
+	\eta _\text{X} > \eta _\text{Carnot} \implies \left( 1+\frac{Q_{c}}{Q_{h}} \right) > \left( 1-\frac{T_{c}}{T_{h}} \right) \iff \frac{Q_{h}}{T_{h}} + \frac{Q_{c}}{T_{c}} <0
+$$
+This condition is identical in the case of the COP as well. That is, for $\eta$ and COP:
+$$
+	\frac{Q_{h}}{T_{h}} + \frac{Q_{c}}{T_{c}} <0
+$$
+Thus telling us that the alien cycle is more efficient as a heat engine, and as a refrigerator.
+
+For cycles worse than the Carnot cycle, we instead have:
+$$
+	\frac{Q_{h}}{T_{h}} + \frac{Q_{c}}{T_{c}} >0
+$$
+We will label this quantity:
+$$
+	\Delta S \equiv  \sum \frac{\Delta Q_{i}}{T_{i}} = \frac{Q_{h}}{T_{h}} + \frac{Q_{c}}{T_{c}}
+$$
+It is a convenient indicator of whether a cycle is better or worse than a Carnot cycle.
+
+Now, if you place the alien cycle and the Carnot cycle next to each other, connected to the same two reservoirs, you will find that heat will flow from the cold to the hot reservoir. This should be impossible, and leads us to the second law of thermodynamics.
+
+No Crazy Heat Flow Rule (TD2):
+> No reversible cycle operating between two reservoirs at temperatures $T_{h}$ and $T_{c}$ can be more efficient than a Carnot cycle operating between the same reservoirs.
+
+- The second law of thermodynamics isn't a quantitative statement, but one about the impossibility of building a certain type of machine
