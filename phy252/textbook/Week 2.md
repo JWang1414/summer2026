@@ -145,3 +145,23 @@ No Crazy Heat Flow Rule (TD2):
 > No reversible cycle operating between two reservoirs at temperatures $T_{h}$ and $T_{c}$ can be more efficient than a Carnot cycle operating between the same reservoirs.
 
 - The second law of thermodynamics isn't a quantitative statement, but one about the impossibility of building a certain type of machine
+## Shifting focus
+As it turns out, $S$ has been in the background of every thermal phenomenon that we have considered thus far.
+
+Time reversal: $\Delta S$ is an indicator of time-reversal symmetry breaking. A process with $\Delta S>0$ can occur spontaneously, but $\Delta S<0$ cannot.
+
+Thermal equilibrium: A system is at thermal equilibrium when $S$ is maximised, and $\Delta S=0$.
+
+Using the definition $dS=dQ /T$ for small deviations from equilibrium, and $dW=-P \, d\left< V \right>$ for a gas, TD1 for particles inside a box can be rewritten as:
+$$
+	dS= \frac{1}{T} d\left< E \right> +\frac{P}{T} d\left< V \right>
+$$
+Now, from the above, temperature and pressure can both be expressed in terms of $S$:
+$$
+	\frac{1}{T} = \left( \frac{ \partial S }{ \partial \left< E \right>  }  \right)_{\left< V \right> } \qquad \frac{P}{T} = \left( \frac{ \partial S }{ \partial \left< V \right>  }  \right)_{\left< E \right> }
+$$
+In some ways, these can even be considered the definitions of temperature and pressure for a general system using the function $S(\left< E \right>, \left< V \right>)$
+
+Clearly, $S$ is quite important, and we will be shifting our focus from $\left< E \right>$ to $S$. Dimensional analysis tells us that $S$ has units J/K. It is also a number such that we expect $S /Nk_{B}\sim 1$.
+
+$S$ is called *entropy*.
