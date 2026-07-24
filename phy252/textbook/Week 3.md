@@ -32,3 +32,46 @@ The probability assigned to the events in the event space is a function that has
 Let $p:\mathcal{E}\to[0, 1]$ be the probability function.
 - If $e_{1}$ and $e_{2}$ are disjoint sets, then $p(e_{1}\cup e_{2})=p(e_{1})+p(e_{2})$
 - The probability of the entire sample space, $p(\Sigma)=1$
+# Random Variables
+A *random variable* (rv) is a map from sample space $\Sigma$ to a real number, $X:\Sigma\to \mathbb{R}$. In an experiment, it can be interpreted as a physical quantity that corresponds to each possible outcome.
+
+In our pigeonhole example, it may, for example, be the magnetic field inside, the temperature, or the size of the pigeonhole.
+
+For some probability function $p$, the *mean* or *expectation value* is:
+$$
+	\left< X \right> = \sum_{i \in\Sigma} p_{i}X(i)
+$$
+The variance of a random variable is:
+$$
+	\text{var}(X) = \sum_{i \in\Sigma} p_{i} [X(i) - \left< X \right> ]^{2}
+$$
+The square root, $\sigma(X)=\sqrt{ \text{var}(X) }$ is the *standard deviation*, or the *root mean square* (rms) of $X$.
+# Surprise
+Given some probability function, the surprised is defined to be:
+$$
+	s(i) \equiv  \log \left( \frac{1}{p(i)} \right)
+$$
+The surprise is always positive.
+- For $p(i)=0$ the surprise is $\infty$
+
+The average surprise is:
+$$
+	\left< s \right> =  \sum_{i \in\Sigma}p(i)s(i)
+$$
+Note that $\left< s \right>$ doesn't depend on $i$. Instead, it is a function of the probability function itself. Such an object is called a *functional*. The notation $\left< s \right> = s[p]$ will be used to emphasize it as a functional of $p$.
+
+In this way, the definition can be re-written as:
+$$
+	s[p] = - \sum_{i \in\Sigma} p(i) \log p(i)
+$$
+- Notice that if you encounter a probability with $p(i)=0$ you will find  a $0\cdot \infty$ limit. Luckily, the 0 here is much stronger than the $\infty$, and so zero-probability outcomes have no affect on the average surprise factor.
+- In intuitively, one might say there is nothing surprising about either an event guaranteed to occur, and one which will never occur
+
+Examine this table of 4 different pigeons with different preferences.
+![[Pasted image 20260724160108.png]]
+$s[p_{A}]=s[p_{B}]$. Permuting the values of the probability functions does not change $s$.
+
+$s[p_{D}]=0$. Any probability function with no spread has zero average surprise.
+
+$s[p_{C}]$ has the maximum possible value of $s[p]$.
+- This one is also called the uniform distribution
