@@ -75,3 +75,33 @@ $s[p_{D}]=0$. Any probability function with no spread has zero average surprise.
 
 $s[p_{C}]$ has the maximum possible value of $s[p]$.
 - This one is also called the uniform distribution
+- There is a chapter going over the Lagrange multipliers required to prove this (optimization problem)
+# Density functions for random variables
+For any random variable, we can build a histogram. A histogram for a random variable $X$ is a whose $x$-axis is bins of width $\Delta X$, centred on a set of points $T_{i}$. The $y$-value is the probability that the random variable takes a value within that bin, divided by $\Delta X$,
+$$
+	\text{hist}(X_{1}) = \frac{\text{Probability that} X\in [X_{1}-\Delta X/2, X_{1}+\Delta X/2]}{\Delta x}
+$$
+In the limit of small bin widths, the histogram goes over into a continuous function called the probability density function.
+
+We will denote the PDF of a random variable $T$ as $\rho_{T}(x)$.
+1. The probability that the random variable $T$ takes a value in the interval $\left[ x-\frac{dx}{2}, x+\frac{dx}{2} \right]$ is equal to $\rho_{T}(x) \, dx$
+2. $\int_{-\infty}^{\infty} \rho_{T}(x) \, dx=1$
+3. $\rho_{T}$ depends on the underlying probability function for the sample space which the random variable $T$ is defined
+
+In PDF notation, the average value of $T$ is:
+$$
+	\left< T \right> = \int_{-\infty}^{\infty} x\rho_{T}(x) \, dx
+$$
+And the average value of any function of $T$ is:
+$$
+	\left< f(T) \right> = \int_{-\infty}^{\infty} f(x)\rho_{T}(x) \, dx
+$$
+Furthermore, given a PDF, we can also find the cumulative distribution function:
+$$
+	C_{T}(x) = \int_{-\infty}^{x} \rho_{T}(t) \, dt
+$$
+It is the probability of finding $T\leq x$
+1. $C_{T}(-\infty)=0$ and $C_{T}(\infty)=1$
+2. $\rho_{T}(x)=\frac{dC_{T}}{dx}$
+
+For dimensional physical quantities like temperature, the units of the PDF is $K^{-1}$. Probabilities are numbers. Probability functions and CDFs are dimensionless. But PDFs have unique dimensions.
