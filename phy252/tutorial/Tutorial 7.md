@@ -62,3 +62,23 @@ $$
 $$
 ---
 b.
+$$
+	\left< X \right> = \int_{0}^{\infty } \frac{x}{\lambda}e^{ -x/\lambda } \, dx = \lambda
+$$
+$$
+	\left< X^{2} \right> = \int_{0}^{\infty} \frac{x^{2}}{\lambda}e^{ -x/\lambda } \, dx = 2\lambda^{2}
+$$
+$$
+	\text{var}(X) = \left< X^{2} \right>  - \left< X \right> ^{2} = 2\lambda^{2} - \lambda^{2} = \lambda^{2}
+$$
+So the average is $\lambda$ and the variance is $\lambda^{2}$.
+# Question 2
+The heat power generated for a single wire is $I^{2}R$. By law of superposition, the total heat power generated from the two wires is:
+$$
+	\dot{Q} = I_{1}^{2}R_{1} + I_{2}^{2}R_{2}
+$$
+From Kirchoff's current law, this becomes:
+$$
+	= I_{1}^{2}R_{1} + (I-I_{1})^{2}R_{2}
+$$
+Note that $R_{1}$ and $R_{2}$ are both constant, positive numbers.
