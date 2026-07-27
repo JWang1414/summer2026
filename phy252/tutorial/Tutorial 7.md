@@ -82,3 +82,13 @@ $$
 	= I_{1}^{2}R_{1} + (I-I_{1})^{2}R_{2}
 $$
 Note that $R_{1}$ and $R_{2}$ are both constant, positive numbers.
+
+Solve for the minimum point:
+$$
+	\frac{d}{dI_{1}}\left[ I_{1}^{2}R_{1} + (I-I_{1})^{2}R_{2} \right] = 2I_{1}R_{1} - 2(I-I_{1})R_{2} = 2I_{1}R_{1} - 2I_{2}R_{2} =0
+$$
+Therefore we have:
+$$
+	I_{1}R_{1} = I_{2}R_{2}
+$$
+As needed.
