@@ -67,3 +67,76 @@ The algorithm for calculating the equilibrium properties of any system is as fol
 1. Identify the untracked dof of the system, and encode the available knowledge about the system in the form of constraints.
 2. Find the most unbiased probability function 𝑝on the sample space of the untracked dof, consistent with the constraints. Calculate the average surprise $\left< s \right>$ for this probability function.
 3. Use $S=k_{B}\left< s \right>$, along with the definition of macro thermodynamic quantities in terms of $S$, to calculate whatever you need.
+# Systems exchanging energy
+Lets begin with a simple system. One that can exchange energy with its environment and nothing else. It has a fixed volume and conducting walls.
+
+Lets say this system has $n$ possible outcomes, each with some associated energy $E_{i}$. Since this system is in thermal equilibrium, $\left< E \right> =\epsilon$ where $\epsilon$ is some constant.
+
+Now, what is the most unbiased probability function for this system? Our goal is to maximize $s[p]$ under the constraints:
+$$
+	p_{1}+p_{2}+\dots+p_{n}-1=0
+$$
+$$
+	p_{1}E_{1} + p_{2}E_{2} + \dots+ p_{n}E_{n} - \epsilon =0
+$$
+With $\alpha$ and $\beta$ as our Lagrange multipliers, this yields the equation:
+$$
+	\frac{ \partial s[p] }{ \partial p_{i} } = \alpha \frac{ \partial \left( \sum_{i}p_{i} -1 \right) }{ \partial p_{i} }  + \beta \frac{ \partial \left( \sum_{i}p_{i}E_{i} -\left< E \right>  \right) }{ \partial p_{i} }
+$$
+Using the definition of the surprise $s[p]=-\sum p_{i} \log p_{i}$ this becomes:
+$$
+	-(1 + \log p_{i}) = \alpha + \beta E_{i} \implies p_{i} = e^{ -(1+\alpha) } e^{ -\beta E_{i} }
+$$
+Now, $e^{ -(1+\alpha) }$ is a constant. We will define $\mathcal{Z}=e^{ 1+\alpha }$. This constant is determined by the first constraint, the one of the probabilities.
+
+One may find that it is equal to:
+$$
+	\mathcal{Z}(\beta) = \sum_{i} e^{ -\beta E_{i} }
+$$
+It is often called the *partition function*, however we will call it the *statistical sum*, or *statsum*.
+
+Therefore, the most unbiased probability function for a system with fixed energy is:
+$$
+	p_{i} = \frac{e^{ -\beta E_{i} }}{\mathcal{Z}}
+$$
+And the equilibrium entropy is:
+$$
+	\left< s \right> _\text{max} = - \sum_{i}p_{i} \log p_{i} = \beta \left< E \right>  + \log \mathcal{Z}(\beta)
+$$
+Where we have simply substituted in the probabilities we have found into the definition of the surprise.
+
+Furthermore, $\mathcal{Z}$ actually functions as a sort of moment generating function for the energy. Just from the math, we have that:
+$$
+	\left< E \right> = - \frac{ \partial  }{ \partial \beta } \log \mathcal{Z} = -\frac{1}{\mathcal{Z}} \frac{ \partial \mathcal{Z} }{ \partial \beta }
+$$
+- Both of these are equivalent (just an application of the chain rule). You may sometimes find that the logarithm can simplify the function somewhat.
+
+In general we have that:
+$$
+	\left< E^{n} \right> = \frac{(-1)^{n}}{\mathcal{Z}} \frac{ \partial ^{n}\mathcal{Z} }{ \partial \beta ^{n} }
+$$
+
+Going back to the equilibrium entropy we have found, you will also find that small change in $\left< s \right>$ can be expressed like:
+$$
+	\begin{align}
+	d\left< s \right> & = d\beta \, \left< E \right>  + \beta \, d\left< E \right>  + d(\log \mathcal{Z}) \\
+	 & = \beta \, d\left< E \right>
+	\end{align}
+$$
+This, combined with our knowledge that $\partial S / \partial \left< E \right> = T^{-1}$ yields:
+$$
+	S = k_{B} \left< s \right> \implies \beta = \frac{1}{k_{B}T}
+$$
+
+The use of $\mathcal{Z}(\beta)$ as a moment generating function for the energy makes it very easy to compute the variance in the energy:
+$$
+	\text{var}(E) = \left< E^{2} \right> - \left< E \right> ^{2}
+$$
+The heat capacity can also be quickly found with these quantities just from the definition:
+$$
+	\frac{C}{k_{B}} = \frac{1}{k_{B}} \frac{ \partial \left< E \right>  }{ \partial T } = \frac{ \partial \left< E \right>  }{ \partial (1 /\beta) }
+$$
+Which becomes:
+$$
+	C = k_{B}\beta^{2} \frac{ \partial^{2} }{ \partial \beta^{2} } \log \mathcal{Z}
+$$
