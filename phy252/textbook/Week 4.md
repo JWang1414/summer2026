@@ -140,3 +140,14 @@ Which becomes:
 $$
 	C = k_{B}\beta^{2} \frac{ \partial^{2} }{ \partial \beta^{2} } \log \mathcal{Z}
 $$
+# Simple harmonic oscillator
+Let us consider a one-dimensional harmonic oscillator. It has mass $m$ and spring constant $k$. The resonance frequency is the familiar $\omega=\sqrt{ k /m }$ and its energy is $E=p^{2} /2m + kx^{2} /2$. What is the thermal physics of this harmonic oscillator when it is in equilibrium with an energy reservoir?
+## Quantum harmonic oscillator
+The energy eigenstates of the quantum harmonic oscillator have energy $E(n)=n\hbar \omega$. Thus, defining our statsum over these energies:
+$$
+	\mathcal{Z}_{q} = \sum_{n=0}^{\infty} e^{ -n\beta \hbar \omega } = \sum_{n=0}^{\infty} (e^{ -\beta \hbar \omega })^{n} = \frac{1}{1-e^{ -\beta \hbar \omega }}
+$$
+This simplification arises because it is a geometric series. The quantum state $n$ also has the associated equilibrium probability:
+$$
+	p^*_{n} = \frac{e^{ -n\beta \hbar \omega }}{\mathcal{Z}_{q}}
+$$
