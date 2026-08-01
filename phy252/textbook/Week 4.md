@@ -151,3 +151,20 @@ This simplification arises because it is a geometric series. The quantum state $
 $$
 	p^*_{n} = \frac{e^{ -n\beta \hbar \omega }}{\mathcal{Z}_{q}}
 $$
+Recall that we can use $\mathcal{Z}$ to generate the moments of the energy. At some temperature $T$, the energy is therefore:
+$$
+	\left< E \right> = -\frac{ \partial \log \mathcal{Z}_{q} }{ \partial \beta } = \frac{\hbar \omega}{e^{ \hbar \omega/k_{B}T } -1}
+$$
+Where we have substituted in the equivalent representation of $\beta$ we just derived.
+
+Now that we have an expression for the energy, now is the time to investigate its behaviour.
+
+When $\beta \hbar \omega\ll 1$, the average energy tends to $\left< E \right>\approx k_{B}T$. Which is actually the manifestation of the equipartition theorem for the harmonic oscillator. It has 2 dof in the limit $T\gg \frac{\hbar \omega}{k_{B}}$, and so this quantity is really $2\times \frac{1}{2}k_{B}T$. In this limit, you will also find that $\mathcal{Z}_{q}\approx \frac{1}{\beta \hbar \omega}$.
+
+In the opposite direction, then $\hbar \omega\gg k_{B}T$, the energy is instead $\left< E \right>\approx \hbar \omega e^{ -\beta \hbar \omega }\to 0$. Thus, at low temperatures below $\hbar \omega /k_{B}$, the system tends to its ground state, with nearly zero average energy.
+
+Substituting the value of $\mathcal{Z}$ we found here into the expression for $\left< s \right>_\text{max}$ also yields the expression:
+$$
+	\left< s \right> _\text{max} = \beta \left< E \right> - \log(1-e^{ -\beta \hbar \omega })
+$$
+At equilibrium.
