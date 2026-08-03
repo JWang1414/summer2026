@@ -1,26 +1,54 @@
 # Question 5
 ---
 a.
-Uniform distribution for $m=\pm 1 /2$. That is, the probability for both will be 50/50
-
+Generically, the most unbiased probability distribution for a system with fixed energy is:
+$$
+	p_{i} = \frac{e^{ -\beta E_{i} }}{\mathcal{Z}} \qquad \mathcal{Z}(\beta) = \sum_{i} e^{ -\beta E_{i} }
+$$
+Where the energies for this system are:
+$$
+	E(m) = -m\mu B
+$$
+This results in the total probability function:
+$$
+	p_{i} = \frac{e^{ -\beta E_{i} }}{e^{ \beta \mu B/2 } + e^{ -\beta \mu B/2 }}
+$$
 ---
 b.
-Start from the stat-sum
 $$
-	\mathcal{Z}(\beta) = \sum_{i} e^{ -\beta E_{i} } = \sum_{m} e^{ \beta m\mu B } = e^{ -\beta \mu B/2 } + e^{ \beta \mu B/2 }
+	\left< E \right> = -\frac{1}{\mathcal{Z}} \frac{ \partial \mathcal{Z} }{ \partial \beta } = \frac{\mu B}{2} \frac{e^{ \beta \mu B/2 }-e^{ -\beta \mu B/2 }}{e^{ \beta \mu B/2 }+e^{ -\beta \mu B/2 }} = \frac{\mu B}{2} \tanh\left( \frac{\beta \mu B}{2} \right)
 $$
-Solve for $\left< E \right>$
+Notice that, by the definition of $\beta$ we have:
 $$
-	\left< E \right> = -\frac{1}{\mathcal{Z}} \frac{ \partial \mathcal{Z} }{ \partial \beta } = -\frac{1}{e^{ -\beta \mu B/2 } + e^{ \beta \mu B/2 }} \left[ \frac{\mu B}{2}(e^{ \beta \mu B/2 } - e^{ -\beta \mu B/2 }) \right]
+	\frac{\mu B}{2}\tanh\left( \frac{\mu B}{2k_{B}T} \right)
 $$
-$$
-	\left< E \right> = \frac{\mu B}{2} \frac{e^{ \beta \mu B/2 } - e^{ -\beta \mu B/2 }}{e^{ -\beta \mu B/2 } + e^{ \beta \mu B/2 }} = \frac{\mu B}{2} \tanh\left( \frac{\mu B}{2k_{B}T} \right)
-$$
-![[Pasted image 20260729152127.png]]
-Graph of $\left< E \right>$ as a function of $T$
-
-![[Pasted image 20260729152224.png]]
-Graph of $d\left< E \right> /dT$ as a function of $T$
+Below is a graph of $\tanh(1 /x)$
+![[Pasted image 20260803163844.png]]
+And this is a graph of its derivative
+![[Pasted image 20260803163914.png]]
 
 ---
 c.
+$$
+	\left< E^{2} \right> = \frac{1}{\mathcal{Z}} \frac{ \partial^{2}\mathcal{Z} }{ \partial \beta^{2} } = \left( \frac{\mu B}{2} \right)^{2} \frac{\mathcal{Z}}{\mathcal{Z}} = \left( \frac{\mu B}{2} \right)^{2}
+$$
+$$
+	\text{var}(E) = \left< E^{2} \right> -\left< E \right> ^{2} = \left( \frac{\mu B}{2} \right)^{2} - \left[ \frac{\mu B}{2} \tanh\left( \frac{\beta \mu B}{2} \right) \right] ^{2} = \left( \frac{\mu B}{2} \right)^{2} \left[ 1- \tanh ^{2}\left( \frac{\mu B}{2k_{B}T} \right) \right]
+$$
+$$
+	\text{var}(E) = \left( \frac{\mu B}{2} \right)^{2} \text{sech}^{2}\left( \frac{\mu B}{2k_{B}T} \right)
+$$
+---
+d.
+$$
+	\frac{e^{ \beta \mu B/2 }}{e^{ -\beta \mu B/2 }} = e^{ \beta \mu B } = e^{ \mu B/k_{B}T }
+$$
+---
+e.
+$$
+	e^{ \mu/2k_{B} }
+$$
+- I have no idea how to determine the magnetic dipole moment $\mu$
+# Question 6
+---
+a.
