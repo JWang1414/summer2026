@@ -52,3 +52,58 @@ $$
 # Question 6
 ---
 a.
+$$
+	\mathcal{Z} = \sum_{n=0}^{\infty} e^{ -n\beta \hbar \omega } = \frac{1}{1-e^{ -\beta \hbar \omega }}
+$$
+---
+b.
+$$
+	\left< E \right> = \frac{ \partial  }{ \partial \beta } \log \mathcal{Z} = \frac{\hbar \omega}{e^{ \hbar \omega/k_{B}T } -1}
+$$
+$$
+	T = \frac{2\hbar \omega}{k_{B}} \implies \frac{\hbar \omega}{k_{B}T} = \frac{\hbar \omega}{k_{B}} \frac{k_{B}}{2\hbar \omega} = \frac{1}{2}
+$$
+The average energy is therefore:
+$$
+	\left< E \right> = \frac{\hbar \omega}{e^{ 1/2 }-1}
+$$
+---
+c.
+Recall that the probability for each $n$ is:
+$$
+	p_{n} = \frac{e^{ -n\beta \hbar \omega }}{\mathcal{Z}}
+$$
+The ratio between two states is:
+$$
+	\frac{e^{ -(m+1)\beta \hbar \omega }}{e^{ -m\beta \hbar \omega }} = e^{ -\beta \hbar \omega }
+$$
+---
+d.
+$$
+	p_{0} = \frac{e^{ 0 }}{\mathcal{Z}} = \mathcal{Z}^{-1} = 1-e^{ -\beta \hbar \omega }
+$$
+$$
+	T = \frac{0.1\hbar \omega}{k_{B}} \implies \frac{\hbar \omega}{k_{B}T} = \frac{\hbar \omega}{k_{B}} \frac{k_{B}}{0.1\hbar \omega} = \frac{1}{0.1} = 10
+$$
+The probability is therefore,
+$$
+	p_{0} = 1-e^{ -10 } \approx 0.9999546
+$$
+---
+e.
+$$
+	\left< E \right>  = \frac{\hbar \omega}{e^{ \hbar \omega/k_{B}T } -1}
+$$
+As a function of $T$ this could be plotted like:
+$$
+	\left< E \right> = \frac{1}{e^{ 1/T }-1}
+$$
+---
+f.
+Definition of the heat capacity is:
+$$
+	C = \frac{ \partial \left< E \right>  }{ \partial T } = \frac{\hbar^{2}\omega^{2}}{k_{B}T^{2}} e^{ \hbar \omega/k_{B}T } (e^{ \hbar \omega/k_{B}T }-1)^{-2}
+$$
+Plotted it looks like:
+![[image.png]]
+Where the derivative is indicated in red, and the original function in blue.
