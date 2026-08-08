@@ -140,6 +140,12 @@ Which becomes:
 $$
 	C = k_{B}\beta^{2} \frac{ \partial^{2} }{ \partial \beta^{2} } \log \mathcal{Z}
 $$
+
+Finally, note that if there are two outcomes $a$ and $b$ with energies $E_{a}$ and $E_{b}$, then the equilibrium probabilities between the two are related by:
+$$
+	\frac{p_{a}}{p_{b}} = e^{ -(E_{a}-E_{b})/k_{B}T }
+$$
+This is called the Boltzmann factor.
 # Simple harmonic oscillator
 Let us consider a one-dimensional harmonic oscillator. It has mass $m$ and spring constant $k$. The resonance frequency is the familiar $\omega=\sqrt{ k /m }$ and its energy is $E=p^{2} /2m + kx^{2} /2$. What is the thermal physics of this harmonic oscillator when it is in equilibrium with an energy reservoir?
 ## Quantum harmonic oscillator
