@@ -32,3 +32,23 @@ These equations can be simplified by identifying the characteristic energy $\eps
 
 Furthermore, the high and low temperature limits for $\mathcal{Z}$ and $\left< E \right>$ for these models can be seen below.
 ![[Pasted image 20260807221838.png]]
+# Multiple degrees of freedom
+A system with multiple degrees of freedom $\mu$ and $\nu$, such that the outcome of one dof does not affect the outcomes of the other, the sum over the combined energy levels factorizes. The statsum for this system simplifies into:
+$$
+	\mathcal{Z} = \mathcal{Z}_{\mu} \mathcal{Z}_{\nu}
+$$
+# Going from $1\to N$ (iid)
+So far we have analyzed a single harmonic oscillator, or a single particle in a box. But what about $N$ iid copies of a system?
+
+Since the probability functions for iid particles are identical, the statsum of an $N$-copy system is simply $\mathcal{Z}_{N}=\mathcal{Z}^{N}_{1}$ where $\mathcal{Z}_{1}$ is the statsum for a single system.
+
+Following from this, we therefore also have:
+$$
+	\log \mathcal{Z}_{N} = N\log \mathcal{Z}_{1} \implies \left< E \right> \to N \left< E \right> \text{ and } \left< s \right> _\text{max}\to N \left< s \right> _\text{max}
+$$
+We will soon show that the standard deviation in the energy increases as $\sigma(E)\to \sqrt{ N }\sigma(E)$. Thus, for large $N$
+$$
+	\frac{\sigma}{\left< E \right> } = \frac{1}{\sqrt{ N }} \to 0
+$$
+Hence, the fluctuations in the energy are negligible for a large number of copies of a system. This is why the equilibrium properties for a large collection of particles appear so deterministic and well-defined.
+- This is kind of an application of the law of large numbers from statistics
