@@ -73,3 +73,32 @@ $$
 	d\left< W \right> = - \frac{\mu(e^{ \beta(2\mu B+E_{0}) }-1)}{e^{ \beta(2\mu B+E_{0}) }+1} \, dB
 $$
 # Question 2
+Recall the equations:
+$$
+	x_{T} = \sqrt{ \frac{k_{B}T}{m\omega^{2}} } \qquad p_{T} = \sqrt{ mk_{B}T }
+$$
+$$
+	\mathcal{l}_{0} = \sqrt{ \frac{\hbar}{m\omega} } \qquad \mathcal{p}_{0} = \sqrt{ \hbar m\omega }
+$$
+---
+a.
+The angular frequency of a classical pendulum is approximately:
+$$
+	\omega=\sqrt{ \frac{g}{L} }
+$$
+Substituting in $T=294$, and the other provided values yields:
+$$
+	x_{T} \approx 6.43 \times 10^{-11} \qquad p_{T} \approx 2.01 \times 10^{-11}
+$$
+---
+b.
+Doing the same for the quantum scales:
+$$
+	l_{0} \approx 1.83 \times 10^{-17} \qquad p_{0} = 5.73 \times 10^{-18}
+$$
+---
+c.
+$$
+	\frac{x_{T}p_{T}}{l_{0}p_{0}} \approx 1.23 \times 10^{13}
+$$
+A huge number, indicating that this (a pendulum hanging at room temperature) is well within the classical limit.
