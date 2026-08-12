@@ -28,3 +28,23 @@ $$
 	d\left< W \right> = \left( \frac{ \partial F }{ \partial b }  \right)_{T} \, db
 $$
 That is, the change in free energy at fixed temperature.
+# Systems exchanging energy & particles
+As of current, we have been limiting ourselves to a setup where the number of particles inside is fixed. However, there are more ways to expand a gas to push a piston. We may either heat it up, or add more particles inside our box. Thus, we are also interested in situations where particles can enter and leave.
+
+In this new state, we expect that, at equilibrium, the internal energy $\left< E \right>$ for the untracked dof is a fixed quantity, and the average number of particles $\left< N \right>$ in the system is at a steady value.
+
+Our task is now to determine the most unbiased probability function given these constraints.
+
+In this new system, we must specify both the energy and the particle number. We will use the tuple $(i, j)$, where $i$ is the energy levels of the system, and $j$ is the number of particles found in an energy level.
+
+$E(i, j)$ means there are $j$ particles in level $i$. If the particles are non-interacting, then $E(i, j)=jE(i)$. However in general the dependence is non-linear. As a note on notation, $N(i, j)$ is $j$, but we'll use this to be clear.
+
+The conditions to maximise $s[p]$ are:
+$$
+	\begin{align}
+	\sum_{(i, j)} p(i, j)-1 & =0 \\
+	\sum_{(i, j)} E(i, j) p(i, j)-\epsilon & =0 \\
+	\sum_{(i, j)}N(i, j)p(i, j)-\nu & =0
+	\end{align}
+$$
+Where $\left< E \right> =\delta$ and $\left< N \right> =\nu$ are fixed constants.
