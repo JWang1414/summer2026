@@ -98,3 +98,29 @@ $$
 	\left< s \right> _\text{max} = \beta \left< E \right> -\beta \mu^a \left< N^a \right>  - \beta \mu^b \left< N^b \right> +\log \mathcal{Z}_{en}(\beta, \mu^a, \mu^b)
 $$
 # Flows of energy & particles
+Consider two systems $A$ and $B$ placed in contact with each other.
+
+Say the two systems share an energy-conducting wall. If the volume and number of particles cannot change, then from the definition of temperature in terms of equilibrium average surprise we have:
+$$
+	\beta=\left( \frac{ \partial \left< s \right>  }{ \partial \left< E \right>  }  \right)_{\left< V \right>,  \left< N \right> }
+$$
+If a small quantity of internal energy $e$ moves from $A$ to $B$, then $A$'s entropy changes by $\delta s_{A}=-\beta s_{A}e$ and $B$ by $\delta s_{B}=\beta_{B}e$. The total change in the entropy is:
+$$
+	\delta s_\text{tot} = (\beta_{B}-\beta_{A})e
+$$
+If this combined system of $A$ and $B$ isn't at equilibrium, and $\delta s_\text{tot}$ is positive, then its entropy increases by energy flow from $A$ to $B$.
+
+That is, when $\beta_{B}>\beta_{A}$ or $T_{A}>T_{B}$, energy flows from $A$ to $B$ until $T_{A}=T_{B}$.
+
+Now imagine this same system, but such that particles can flow through the wall. From the definition of chemical potential in terms of equilibrium average surprise we have:
+$$
+	\beta \mu =- \left( \frac{ \partial \left< s \right>  }{ \partial \left< N \right>  }  \right)_{\left< E \right> , \left< V \right> }
+$$
+In the same manner, if a small number $n$ of particles moves from $A$ to $B$, then $A$'s entropy changes by $\delta s_{A}=\beta_{A}\mu_{A}n$ and $B$'s by $\delta s_{B}=-\beta_{B}\mu_{B}n$. The total change in the entropy is:
+$$
+	\delta S_\text{tot} = \delta S_{A} + \delta S_{B} = \left( \frac{\mu_{A}}{T_{A}} - \frac{\mu_{B}}{T_{B}} \right)n
+$$
+And, if the combined system is not at equilibrium, and $\mu_{A} /T_{A}>\mu_{B} /T_{B}$, then its entropy increases by particle transfer from $A$ to $B$. In particular, if both systems are at the same temperature, then particles flow from $A$ to $B$ when $\mu_{A}>\mu_{B}$.
+
+In just the same way energy flows from high to low temperature, particles flow from high to low chemical potential. In some sense, it is like a "voltage" that drives a current of particles from regions of high voltage to lower voltage.
+- Perhaps this is why it is called a potential?
