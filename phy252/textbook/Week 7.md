@@ -72,3 +72,55 @@ $$
 	\frac{S}{k_{B}} = \left< N \right> \left[ \log\left( \frac{V\left< E \right> ^{3/2}}{\left< N \right> ^{5/2}} \right) + \frac{3}{2}\log\left( \frac{4\pi m}{3h^{2}} \right) + \frac{5}{2} \right]
 $$
 # Phases of matter
+The simplest definition of a *phase* is a collection of matter with homogeneous macro properties. So the $\left< E \right>$, $S$, and $F$ are spatially uniform everywhere within the phase.
+
+Consider two phases in equilibrium and share a *phase boundary*. So they may exchange energy, volume, and particles. Since they are at equilibrium, they must have the same temperature, pressure, and chemical potential. So, under what conditions is this possible?
+
+Well, the number of unconstrained free parameters is the total free parameters, subtract the number of constraints. It turns out there are $P(C-1)$ free parameters, and $C(P-1)$ constraints. Where $P$ is the number of phases, and $C$ is the number of constituents.
+
+The number of unconstrained free parameters is therefore determined by the *Gibbs phase rule*:
+$$
+	F-C+P=2
+$$
+Where $F$ is the number of unconstrained free parameters.
+
+One interesting point is when $F=0$. For example the equilibrium between the three phases of water ($C=1, P=3$). There is no freedom left, and so there is just one choice of pressure and temperature. Notably, this special point where all three phases may co-exist is called the *triple point*.
+- For water, this turns out to be 611.66 Pa and 273.16 K.
+## Phase transitions
+Consider a block of ice at some temperature $T<T_{pt}$, where $T_{pt}$ is the temperature where the solid and liquid phases are in equilibrium.
+
+Ice has a well-defined heat capacity, so, as we transfer heat to it, its internal energy and temperature will increase. However, notice that ice cannot exist above $T_{pt}$, and water cannot exist below $T_{pt}$. At these points there may only be ice, or only water.
+
+So what happens as we increase the temperature of ice to approach $T_{pt}$? Well, at exactly $T=T_{pt}$, heat no longer goes into increasing the internal energy, and instead increases the entropy of the ice at a fixed temperature. That is, until the mass of ice turns into liquid.
+
+The amount of energy required to cross a phase boundary in this way, per unit mass, is called *latent heat*. If you measure the heat capacity of a material by monitoring its temperature vs heat input, you would see a discontinuity at the phase transition, where latent heat is involved.
+
+For a phase transition between 1 and 2 of a single component system, let the latent heat be $L$. Since $\Delta Q=T\Delta S$, and the latent heat is only involved in change entropy, the entropy difference between the two phases at the transition temperature $T_{pt}$ is:
+$$
+	\frac{\left< S_{2} \right> -\left< S_{1} \right> }{M} = \frac{L}{T_{pt}}
+$$
+Where $M$ is the mass of the material.
+# Chemical reactions
+Consider a mixture of $\left< N \right>$ molecules of all types. Define the number fraction be $x_{a}=\left< N_{a} \right> /\left< N \right>$ for particles labelled $a$. Recall from the definition of the absolute activity we have:
+$$
+	\lambda_{a} = e^{ \beta \mu_{a} }
+$$
+The ratio of $x_{a}$ and $\lambda_{a}$ is denoted as:
+$$
+	e^{ -\beta G^0_{a} } = \frac{x_{a}}{\lambda_{a}} = x_{a}e^{ -\beta \mu_{a} }
+$$
+Where $G^0_{a} = \mu^0_{a}-k_{B}T\log x_{a}$
+
+Consider an example where reactants $a+b+c$ are in equilibrium with products $d+e$. If they are at chemical equilibrium, then:
+$$
+	\lambda_{a}\lambda_{b}\lambda_{c} = \lambda_{d}\lambda_{e} \implies \mu_{a}+\mu_{b}+\mu_{c} = \mu_{d} + \mu_{e}
+$$
+At any point where this is not true, a reaction is occurring.
+
+The number fractions of the molecules at equilibrium are:
+$$
+	\eta = \frac{x_{a}b_{b}x_{c}}{x_{d}x_{e}} = e^{ -\Delta G^{0}/k_{B}T }
+$$
+Where $\Delta G^0=(G^0_{a}+G^0_{b}+G^0_{c}) - (G^0_{d}+G^0_{e})$ is called the *reaction energy*.
+
+Now, note that for reactive chemicals, $\Delta G^0$ is ~1 eV, the typical energy scale for transferring electrons between atoms to make and break strong bonds. However, $k_{B}T$ at room temperature is just ~25 meV. This means that if $\Delta G^0$ is slightly positive, then $\eta\ll1$ and vice versa. This tells us that equilibrium between reactive chemicals at room temperature often heavily favour side, ideally the side of the products.
