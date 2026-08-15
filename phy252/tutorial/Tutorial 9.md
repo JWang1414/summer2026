@@ -116,4 +116,28 @@ Definition of the statsum:
 $$
 	\mathcal{Z}(\beta) = \sum_{i} e^{ -\beta E_{i} }
 $$
-- I'm not sure how to account for the translational degrees of freedom here
+$$
+	\mathcal{Z}(\beta) = e^{ -\beta(p^{2}/2m + \mu B/2) } + e^{ -\beta(p^{2}/2m - \mu B/2) } = e^{ -\beta p^{2}/2m } (e^{ \beta\mu B/2 } + e^{ -\beta\mu B/2 })
+$$
+---
+b.
+$$
+	\left< E \right> = - \frac{ \partial  }{ \partial \beta } \log \mathcal{Z}
+$$
+$$
+	\log \mathcal{Z} = -\frac{\beta p^{2}}{2m} + \log(e^{ \beta\mu B/2 } + e^{ -\beta\mu B/2 })
+$$
+$$
+	\left< E \right> = - \frac{ \partial  }{ \partial \beta } \left[ -\frac{\beta p^{2}}{2m} + \log(e^{ \beta\mu B/2 } + e^{ -\beta\mu B/2 }) \right] = \frac{ \partial  }{ \partial \beta } \left[ \frac{\beta p^{2}}{2m} - \log(e^{ \beta\mu B/2 } + e^{ -\beta\mu B/2 }) \right]
+$$
+$$
+	= \frac{p^{2}}{2m} - \frac{1}{e^{ \beta \mu B/2 } + e^{ -\beta \mu B/2 }} \frac{ \partial  }{ \partial \beta } \left[ e^{ \beta\mu B/2 } + e^{ -\beta\mu B/2 } \right]
+$$
+$$
+	= \frac{p^{2}}{2m} - \frac{1}{e^{ \beta \mu B/2 } + e^{ -\beta \mu B/2 }} \frac{\mu B}{2} \left( e^{ \beta \mu B/2 } - e^{ -\beta \mu B/2 } \right)
+$$
+$$
+	= \frac{p^{2}}{2m} - \frac{\mu B}{2} \tanh\left( \frac{\beta \mu B}{2} \right)
+$$
+---
+c.

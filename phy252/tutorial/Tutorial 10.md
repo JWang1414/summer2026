@@ -37,3 +37,32 @@ $$
 $$
 Where $\beta=1 /k_{B}T$
 # Question 2
+$$
+	\mathcal{Z}_{en}(\beta, \lambda) = \sum_{(i, j)} \lambda ^{j} e^{ -\beta E(i, j) } \qquad \text{where } \lambda=e^{ \beta \mu }
+$$
+Calculations:
+$$
+	\lambda = e^{ \beta \mu } = e^{ \mu/k_{B}T } = e^{ \epsilon^{2} }
+$$
+$$
+	\beta E(a, j) = \frac{1}{k_{B}(10 /k_{B}\epsilon)} \times 0 = \frac{\epsilon}{10} \times 0 =0
+$$
+$$
+	\beta E(b, j) = \frac{\epsilon}{10} \times \epsilon = \frac{\epsilon^{2}}{10}
+$$
+$$
+	\beta E(c, j) = \frac{\epsilon}{10} \times 5\epsilon = \frac{\epsilon^{2}}{2}
+$$
+Assuming the particles are non-interacting then the summation becomes:
+$$
+	\mathcal{Z}_{en} = \sum_{j} e^{ \epsilon^{2}j }(1 + e^{ -\epsilon^{2}j/10 } + e^{ -e^{2}j/2 })
+$$
+# Question 3
+---
+a.
+Energy flows from high to low temperature. Therefore energy should flow from B to A.
+
+---
+b.
+Particles flow from high to low chemical potential. Therefore the particles should flow from B to A.
+# Question 4
