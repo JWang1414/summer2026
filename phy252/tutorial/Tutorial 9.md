@@ -141,3 +141,25 @@ $$
 $$
 ---
 c.
+$$
+	F \equiv  -\frac{1}{\beta} \log \mathcal{Z} \qquad d\left< W \right>  = \frac{ \partial F }{ \partial b } \, db
+$$
+I already solved for $\log \mathcal{Z}$ in the previous question.
+$$
+	F = -\frac{1}{\beta} \left[ -\frac{\beta p^{2}}{2m} + \log(e^{ \beta\mu B/2 } + e^{ -\beta\mu B/2 }) \right] = \frac{p^{2}}{2m} - \frac{1}{\beta} \log(e^{ \beta\mu B/2 } + e^{ -\beta\mu B/2 })
+$$
+$$
+	\frac{d\left< W \right> }{dB} = -\frac{1}{\beta} \frac{1}{e^{ \beta\mu B/2 } + e^{ -\beta\mu B/2 }} \frac{\mu \beta}{2} \left( e^{ \beta \mu B/2 } - e^{ -\beta \mu B/2 } \right)
+$$
+$$
+	\frac{dW}{dB} = -\frac{\mu}{2} \tanh\left( \frac{\beta \mu B}{2} \right)
+$$
+The work done on a single atom from $B_{0}$ to $2B_{0}$ is:
+$$
+	W = \int_{B_{0}}^{2B_{0}} -\frac{\mu}{2} \tanh\left( \frac{\beta \mu B}{2} \right) \, dB = -\frac{\mu}{2} \left[ \frac{2}{\beta \mu} \log\left( \cosh\left( \frac{\beta \mu B}{2} \right) \right) \right]^{2B_{0}}_{B_{0}}
+$$
+This eventually simplifies into:
+$$
+	-\frac{1}{\beta} \left[ \log \cosh(\beta \mu B_{0}) - \log \cosh\left( \frac{\beta \mu B}{2} \right) \right]
+$$
+- I honestly do not think this is the answer, on account of how complicated it is. But to be honest, I'm kind of confused as to how I'm intended to approach this problem anyways
