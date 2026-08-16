@@ -65,4 +65,35 @@ Energy flows from high to low temperature. Therefore energy should flow from B t
 ---
 b.
 Particles flow from high to low chemical potential. Therefore the particles should flow from B to A.
+# Question 5
+---
+a.
+$$
+	F-C+P=2
+$$
+In this case $C=2$. So:
+$$
+	F-2+P=2 \implies F+P=4
+$$
+$$
+	P=4-F
+$$
+For the maximum number of phases $F=0$ and therefore the max number of phases that can co-exist at equilibrium is 4.
+
+---
+b.
+The temperature is roughly 77-78 K
+
+---
+c.
+$$
+	\frac{\left< S_{2} \right> -\left< S_{1} \right> }{M} = \frac{L}{T_{pt}}
+$$
+We have $M=1$, $L=200$ and $T_{pt}=77.5$.
+
+The change in entropy is therefore:
+$$
+	\Delta \left< S \right> = \left< S_{2} \right> -\left< S_{1} \right> = \frac{ML}{T_{pt}} \approx 2.58 \text{ kJ/K}
+$$
 # Question 4
+- I have no idea how to do this question
