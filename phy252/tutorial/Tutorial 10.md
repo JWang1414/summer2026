@@ -96,4 +96,19 @@ $$
 	\Delta \left< S \right> = \left< S_{2} \right> -\left< S_{1} \right> = \frac{ML}{T_{pt}} \approx 2.58 \text{ kJ/K}
 $$
 # Question 4
-- I have no idea how to do this question
+$$
+	\Delta S = Nk_{B} \log\left( \frac{V_{f}}{V_{i}} \right)
+$$
+From the change in volume between the neon and argon:
+$$
+	\Delta S= Nk_{B} \left[ \log\left( \frac{60}{20} \right) + \log\left( \frac{60}{40} \right) \right]
+$$
+Using the idea gas law:
+$$
+	\frac{PV}{T} = Nk_{B}
+$$
+Therefore:
+$$
+	\Delta S = \frac{P}{T} \left[ V_\text{neon} \log(3) + V_\text{argon} \log\left( \frac{3}{2} \right) \right] \approx 12.7
+$$
+So the change in entropy is 12.7 J/K
